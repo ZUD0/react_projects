@@ -23,7 +23,6 @@ function Chat() {
             db.collection('rooms').doc(roomId).onSnapshot(
                 snapshot => {
                     setRoomName(snapshot.data().name)
-                    console.log("This is roomName",roomName);
                 }
             )
             db.collection('rooms').doc(roomId).collection("messages").orderBy('timestamp', 'asc').onSnapshot(snapshot => {
