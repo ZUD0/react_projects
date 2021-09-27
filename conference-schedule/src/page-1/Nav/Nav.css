@@ -1,0 +1,91 @@
+.nav {
+  color: #fff;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 0.65;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+a:-webkit-any-link {
+  color: #fff !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  padding: 5px 10px;
+}
+
+button {
+  background-color: transparent !important;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+button :hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  display: none;
+  cursor: pointer;
+}
+
+.nav__sidebar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__bar {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+  .bar {
+    display: block;
+  }
+
+  .nav__list {
+    display: none;
+  }
+  .nav__sidebar .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    height: 100vh;
+    width: 40vw;
+    transition: all 1s ease-in;
+  }
+
+  .nav__sidebar .nav__list button {
+    margin-top: .5rem;
+  }
+
+  .nav__listLinkName{
+      font-size:1.5rem;
+  }
+}
